@@ -63,11 +63,3 @@ pipeline = map_stage | prepare_reduce_input | reduce_chain
 
 result = pipeline.invoke(parts)
 print(result)
-
-
-
-
-
-
-
-

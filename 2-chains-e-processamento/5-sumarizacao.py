@@ -38,7 +38,7 @@ a endless song of ambition, struggle, and hope.
 """
 
 splitter = RecursiveCharacterTextSplitter(
-    chunk_size=250, chunk_overlap=70, 
+    chunk_size=250, chunk_overlap=70,
 )
 
 parts = splitter.create_documents([long_text])
