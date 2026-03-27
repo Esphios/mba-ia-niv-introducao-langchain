@@ -1,6 +1,6 @@
 # Introdução ao LangChain
 
-Este curso é destinado a para quem quer ter o primeiro contato com o LangChain. A seguir, apresentamos as instruções para configurar o ambiente utilizando `venv`, instalar as dependências necessárias e uma visão geral dos principais tópicos abordados.
+Este curso é destinado a quem quer ter o primeiro contato com o LangChain. A seguir, apresentamos as instruções para configurar o ambiente utilizando `venv`, instalar as dependências necessárias e ter uma visão geral dos principais tópicos abordados.
 
 ## Configuração do Ambiente
 
@@ -29,47 +29,47 @@ Para configurar o ambiente e instalar as dependências do projeto, siga os passo
 3. **Configurar as variáveis de ambiente:**
 
    - Duplique o arquivo `.env.example` e renomeie para `.env`
-   - Abra o arquivo `.env` e substitua os valores pelas suas chaves de API reais obtidas conforme instruções abaixo
+   - Abra o arquivo `.env` e substitua os valores pelas suas chaves de API reais, obtidas conforme as instruções abaixo
 
 ## Principais Tópicos Abordados
 
 ### Fundamentos Básicos
-- **Introdução ao LangChain:** Conceitos básicos e primeira integração com modelos de linguagem
-- **Integração com OpenAI:** Como usar o ChatOpenAI para interações básicas
-- **Integração com Google Gemini:** Configuração e uso do modelo Gemini via Google GenAI
-- **Templates de Prompt:** Criação de templates simples e avançados para prompts
-- **Chat Prompts:** Implementação de sistemas de conversação com templates estruturados
+- **Introdução ao LangChain:** conceitos básicos e primeira integração com modelos de linguagem
+- **Integração com OpenAI:** como usar o ChatOpenAI para interações básicas
+- **Integração com Google Gemini:** configuração e uso do modelo Gemini via Google GenAI
+- **Templates de Prompt:** criação de templates simples e avançados para prompts
+- **Chat Prompts:** implementação de sistemas de conversação com templates estruturados
 
 ### Chains e Processamento Avançado
-- **LCEL (LangChain Expression Language):** Sintaxe de pipe (|) para conectar componentes
-- **Chains Básicas:** Criação de pipelines simples de pergunta e resposta
-- **Chains Complexas:** Pipelines multi-etapas com tradução e sumarização
-- **Runnables Customizados:** Decorador @chain e RunnableLambda para funções personalizadas
-- **Text Splitters:** Divisão de textos longos em chunks para processamento
-- **Summarization Chains:** Técnicas "stuff" e "map_reduce" para sumarização de documentos
-- **Structured Output:** Extração de dados estruturados usando Pydantic models
+- **LCEL (LangChain Expression Language):** sintaxe de pipe (`|`) para conectar componentes
+- **Chains Básicas:** criação de pipelines simples de pergunta e resposta
+- **Chains Complexas:** pipelines multietapas com tradução e sumarização
+- **Runnables Customizados:** decorador `@chain` e `RunnableLambda` para funções personalizadas
+- **Text Splitters:** divisão de textos longos em chunks para processamento
+- **Summarization Chains:** técnicas `stuff` e `map_reduce` para sumarização de documentos
+- **Structured Output:** extração de dados estruturados usando modelos Pydantic
 
 ### Agentes e Tools
-- **Custom Tools:** Criação de ferramentas personalizadas com decorador @tool
-- **ReAct Agents:** Implementação de agentes que raciocinam e agem
-- **Agent Executors:** Orquestração de agentes com múltiplas ferramentas
-- **Prompt Hub:** Uso de prompts pré-definidos da comunidade LangChain
+- **Custom Tools:** criação de ferramentas personalizadas com o decorador `@tool`
+- **ReAct Agents:** implementação de agentes que raciocinam e agem
+- **Agent Executors:** orquestração de agentes com múltiplas ferramentas
+- **Prompt Hub:** uso de prompts predefinidos da comunidade LangChain
 
 ### Gerenciamento de Memória
-- **Chat History:** Implementação de histórico de conversação persistente
-- **Message Memory:** Armazenamento e recuperação de mensagens em sessões
-- **Memory Trimming:** Técnicas de janela deslizante para gerenciar contexto limitado
-- **Session Management:** Gerenciamento de múltiplas sessões de conversa
+- **Chat History:** implementação de histórico de conversação persistente
+- **Message Memory:** armazenamento e recuperação de mensagens em sessões
+- **Memory Trimming:** técnicas de janela deslizante para gerenciar contexto limitado
+- **Session Management:** gerenciamento de múltiplas sessões de conversa
 
 ### Document Loaders e RAG
-- **Web Loaders:** Carregamento de conteúdo de páginas web
-- **PDF Loaders:** Processamento e extração de texto de documentos PDF
-- **Document Chunking:** Estratégias de divisão de documentos para processamento eficiente
-- **RAG Foundations:** Conceitos básicos para Retrieval-Augmented Generation
+- **Web Loaders:** carregamento de conteúdo de páginas web
+- **PDF Loaders:** processamento e extração de texto de documentos PDF
+- **Document Chunking:** estratégias de divisão de documentos para processamento eficiente
+- **RAG Foundations:** conceitos básicos para Retrieval-Augmented Generation
 
 ## Requisitos para Execução dos Códigos
 
-Para executar os códigos fornecidos no curso, é necessário criar chaves de API (API Keys) para os serviços da OpenAI e do Google Gemini. Abaixo, fornecemos instruções detalhadas para a criação dessas chaves.
+Para executar os códigos fornecidos no curso, é necessário criar chaves de API para os serviços da OpenAI e do Google Gemini. Abaixo, fornecemos instruções detalhadas para a criação dessas chaves.
 
 ### Criando uma API Key na OpenAI
 

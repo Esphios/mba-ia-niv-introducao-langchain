@@ -19,7 +19,7 @@ pdf_path = current_dir / "gpt5.pdf"
 docs = PyPDFLoader(str(pdf_path)).load()
 
 splits = RecursiveCharacterTextSplitter(
-    chunk_size=1000, 
+    chunk_size=1000,
     chunk_overlap=150, add_start_index=False).split_documents(docs)
 if not splits:
     raise SystemExit(0)
@@ -30,7 +30,7 @@ enriched = [
         metadata={k: v for k, v in d.metadata.items() if v not in ("", None)}
     )
     for d in splits
-]    
+]
 
 ids = [f"doc-{i}" for i in range(len(enriched))]
 

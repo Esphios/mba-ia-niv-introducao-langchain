@@ -24,23 +24,23 @@ def web_search_mock(query: str) -> str:
         "Italy": "Rome",
         "Spain": "Madrid",
         "United States": "Washington, D.C."
-        
+
     }
     for country, capital in data.items():
         if country.lower() in query.lower():
             return f"The capital of {country} is {capital}."
-    return "I don't know the capital of that country."
+    return "Final answer: \"I don't know the capital of that country\". THAT IS FINAL. DO NOT try to find another way to get the answer"
 
-llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.5)
+llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.2, disable_streaming=True)
 tools = [web_search_mock]
 
 prompt = hub.pull("hwchase17/react")
 agent_chain = create_react_agent(llm, tools, prompt)
 
 agent_executor = AgentExecutor.from_agent_and_tools(
-    agent=agent_chain, 
-    tools=tools, 
-    verbose=True, 
+    agent=agent_chain,
+    tools=tools,
+    verbose=True,
     # max_iterations=5
 )
 

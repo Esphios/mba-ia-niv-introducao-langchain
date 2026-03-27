@@ -24,7 +24,6 @@ def web_search_mock(query: str) -> str:
         "Italy": "Rome",
         "Spain": "Madrid",
         "United States": "Washington, D.C."
-        
     }
     for country, capital in data.items():
         if country.lower() in query.lower():
@@ -37,9 +36,9 @@ tools = [calculator, web_search_mock]
 
 prompt = PromptTemplate.from_template(
 """
-Answer the following questions as best you can. You have access to the following tools.
-Only use the information you get from the tools, even if you know the answer.
-If the information is not provided by the tools, say you don't know.
+Answer the following questions. You have access to the provided tools.
+Use ONLY the information you get from the tools, even if you know the answer.
+If the information is not provided by the tools, say you DO NOT KNOW the answer.
 
 {tools}
 
@@ -58,7 +57,7 @@ Final Answer: the final answer to the original input question
 Rules:
 - If you choose an Action, do NOT include Final Answer in the same step.
 - After Action and Action Input, stop and wait for Observation.
-- Never search the internet. Only use the tools provided.
+- NEVER search the internet. Use ONLY the tools provided.
 
 Begin!
 
@@ -68,9 +67,9 @@ Thought:{agent_scratchpad}"""
 agent_chain = create_react_agent(llm, tools, prompt, stop_sequence=False)
 
 agent_executor = AgentExecutor.from_agent_and_tools(
-    agent=agent_chain, 
-    tools=tools, 
-    verbose=True, 
+    agent=agent_chain,
+    tools=tools,
+    verbose=True,
     handle_parsing_errors="Invalid format. Either provide an Action with Action Input, or a Final Answer only.",
     max_iterations=3)
 
