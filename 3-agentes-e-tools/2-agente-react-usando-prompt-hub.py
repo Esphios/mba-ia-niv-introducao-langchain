@@ -1,7 +1,7 @@
 from langchain.tools import tool
 from langchain_openai import ChatOpenAI
-from langchain.agents import create_react_agent, AgentExecutor
-from langchain import hub
+from langchain_classic.agents import create_react_agent, AgentExecutor
+from langchainhub import Client
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -34,7 +34,7 @@ def web_search_mock(query: str) -> str:
 llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.2, disable_streaming=True)
 tools = [web_search_mock]
 
-prompt = hub.pull("hwchase17/react")
+prompt = Client().pull("hwchase17/react")
 agent_chain = create_react_agent(llm, tools, prompt)
 
 agent_executor = AgentExecutor.from_agent_and_tools(

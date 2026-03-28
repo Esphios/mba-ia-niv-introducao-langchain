@@ -1,4 +1,4 @@
-from langchain.prompts import PromptTemplate
+from langchain_classic.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_core.runnables import chain
 from dotenv import load_dotenv

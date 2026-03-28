@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 from typing import Iterator, Dict, Any
 
-from langchain.prompts import PromptTemplate
+from langchain_classic.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough

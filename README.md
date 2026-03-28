@@ -22,7 +22,7 @@ Para configurar o ambiente e instalar as dependências do projeto, siga os passo
 
    **Opção B - Instalação direta dos pacotes principais:**
    ```bash
-   pip install langchain langchain-openai langchain-google-genai langchain-community langchain-text-splitters langchain-postgres psycopg[binary] python-dotenv beautifulsoup4 pypdf && pip freeze > requirements.txt
+   pip install langchain langchain-classic langchain-openai langchain-google-genai langchain-community langchain-text-splitters langchain-postgres langchainhub psycopg[binary] python-dotenv beautifulsoup4 pypdf && pip freeze > requirements.txt
    ```
    Este comando também instalará todas as dependências automaticamente e gerará o arquivo `requirements.txt`.
 

@@ -1,4 +1,4 @@
-from langchain.prompts import PromptTemplate
+from langchain_classic.prompts import PromptTemplate
 
 template = PromptTemplate(
     input_variables=["name"],
